@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url(_OpenSans-Light.ttf);
+    font-weight: 300;
+ }
+
+ @font-face {
+    font-family: "Open Sans";
+    src: url(_OpenSans-Regular.ttf);
+    font-weight: 400;
+ }
+
+/* Take up max space for flexbox */
+html, body, #qa {
+    height: 100%;
+}
+
+/* Take up max space on AnkiDroid */
+#content {
+    margin: 0px;
+    height: 100%;
+}
+
+body {
+    background-color: #e6e6e6;
+    margin: 0px;
+    font-family:  "Open Sans", monospace;
+    font-size: 18px;
+    color: rgb(34, 34, 34);
+}
+
+/* Center our inner-container both vertically and horizontally */
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: min-content;
+    background-color: #e6e6e6;
+    overflow: hidden;
+    min-width: 0;
+    
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    max-height: calc(100% - 40px);
+    max-width: calc(100% - 40px);
+    overflow: scroll;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px grey;
+}
+
+/* If using a large screen, limit max width to reasonable size */
+@media screen and (min-width: 800px) { 
+    .inner-container {
+        max-width: 760px;
+    }
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: fit-content;
+}
+
+.flex-item {
+    flex: 1 1 auto;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+    min-width: 0;
+    /* background-color: #ffe8ec; */
+}
+
+
+.label {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 80px;
+    padding: 10px 5px;
+    text-transform: uppercase;
+    font-size: 65%;
+    color: #919191;
+}
+
+@media screen and (max-width: 480px) { 
+    .label {
+        writing-mode: vertical-lr;
+        transform: rotate(-180deg);
+        margin: auto;
+        width: auto;
+    }
+}
+
+
+.XL {
+    font-size: 1.6rem;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 20em;
+}
+
+.blur, .blur *  {
+    /* color: transparent !important;
+    text-shadow: 0 0 0.8em rgba(0,0,0,0.5); */
+    -webkit-filter: blur(10px);
+ }
+
+ .blur > img {
+    -webkit-filter: blur(20px);
+ }
+
+ .hide, .hide * {
+    visibility: hidden;
+}
+
+ 

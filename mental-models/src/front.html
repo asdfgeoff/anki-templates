@@ -1,0 +1,73 @@
+{{#Definition}}
+<div class="outer-container">
+	<div class="inner-container">
+		<div class="flex-row">
+			<div class="flex-item label">
+				Concept
+			</div>
+			<div class="flex-item XL center blur">
+				{{Concept}}
+			</div>
+		</div>
+		<div class="flex-row">
+			<div class="flex-item label">
+				Definition
+			</div>
+			<div class="flex-item">
+				{{Definition}}
+			</div>
+		</div>
+		{{#Visual}}
+		<div class="flex-row">
+			<div class="flex-item label">
+				Visual
+			</div>
+			<div class="flex-item center blur">
+				{{Visual}}
+			</div>
+		</div>
+		{{/Visual}}
+		{{#Implication}}
+		<div class="flex-row">
+			<div class="flex-item label">
+				Implication
+			</div>
+			<div class="flex-item hide">
+				{{Implication}}
+			</div>
+		</div>
+		{{/Implication}}
+		{{#Drawbacks}}
+		<div class="flex-row">
+			<div class="flex-item label">
+				Drawbacks
+			</div>
+			<div class="flex-item">
+				{{Drawbacks}}
+			</div>
+		</div>
+		{{/Drawbacks}}
+	</div>
+</div>
+</div>
+{{/Definition}}
+
+<script>
+function injectScript(src) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.async = true;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+};
+
+(async () => {
+    if (typeof isLoaded === 'undefined') {
+        await injectScript('_master.js');
+    }
+    frontSide();
+})();
+</script>
