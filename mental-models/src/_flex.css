@@ -52,6 +52,16 @@ body {
     box-shadow: 0px 5px 15px grey;
 }
 
+/* Dark mode class selector for AnkiWeb & Anki desktop*/
+.nightMode .inner-container {
+    background-color: #111111;
+}
+
+/* Dark mode class selector for AnkiDroid */
+.night_mode .inner-container {
+    background-color: #111111;
+}
+
 /* If using a large screen, limit max width to reasonable size */
 @media screen and (min-width: 800px) { 
     .inner-container {
